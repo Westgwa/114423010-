@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EX_23</title>
+
+  <style>
+    body {
+      font-family: Roboto, Arial, sans-serif;
+      background-color: #f6f6f6;
+      padding: 40px;
+      color: #2f2f2f;
+    }
+
+    .container {
+      width: 520px;
+      margin: 0 auto;
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+      text-align: center;
+    }
+
+    img {
+      width: 450px;
+      height: 240px;
+      object-fit: cover;
+      border: 1px solid #ddd;
+      display: block;
+      margin: 0 auto 16px;
+    }
+
+    button {
+      height: 22px;
+      border-radius: 8px;
+      background-color: #ffffff;
+      border: 1px solid #2f2f2f;
+      color: #2f2f2f;
+      font-size: 13px;
+      font-family: Roboto, Arial, sans-serif;
+      padding: 0 12px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #eeeeee;
+    }
+
+    .info {
+      display: none;
+      margin-top: 20px;
+      padding: 16px;
+      text-align: left;
+      background-color: #f3f3f3;
+      border-radius: 8px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #707070;
+    }
+
+    .info h3 {
+      margin-top: 0;
+      color: #2f2f2f;
+      font-size: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Image Preview</h2>
+
+    <img 
+      src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+      alt="Sample Landscape"
+    />
+
+    <button id="toggleBtn" onclick="toggleInfo()">查看資訊</button>
+
+    <div id="detailInfo" class="info">
+      <h3>細部資訊</h3>
+      <p><strong>File name:</strong> sample_landscape.jpg</p>
+      <p><strong>Image size:</strong> 450 x 240</p>
+      <p><strong>Description:</strong> This is a sample landscape image from the internet.</p>
+      <p><strong>Button style:</strong> height 22px, border radius 8px, font size 13px.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleInfo() {
+      const info = document.getElementById("detailInfo");
+      const btn = document.getElementById("toggleBtn");
+
+      if (info.style.display === "block") {
+        info.style.display = "none";
+        btn.innerText = "查看資訊";
+      } else {
+        info.style.display = "block";
+        btn.innerText = "收起資訊";
+      }
+    }
+  </script>
+</body>
+</html>
