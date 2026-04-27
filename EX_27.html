@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寬度偵測響應式版面</title>
+    <style>
+        body {
+            background-color: #4da6ff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 600px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .header {
+            background-color: #add94d;
+            height: 150px;
+            border-radius: 8px;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; 
+            gap: 10px;
+        }
+
+        .section {
+            background-color: #00bcd4;
+            height: 120px;
+            border-radius: 8px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .footer-item {
+            background-color: #eceff1;
+            height: 60px;
+            border-radius: 4px;
+        }
+
+        @media screen and (max-width: 480px) {
+            .main-grid {
+
+                grid-template-columns: 1fr; 
+            }
+
+            .header {
+                height: 120px; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header"></div>
+
+        <div class="main-grid">
+            <div class="section"></div>
+            <div class="section"></div>
+            <div class="section"></div>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-item"></div>
+            <div class="footer-item"></div>
+            <div class="footer-item"></div>
+            <div class="footer-item"></div>
+        </div>
+    </div>
+
+</body>
+</html>
